@@ -12,7 +12,7 @@ function validarCampo(){
 //função que adiciona a tarefa
 
 function adicionarTarefa(){
-    let linhas= document.getElementById("task")
+    let linhas= document.getElementById("task");
 
     if(validarCampo()) {
         alert("Preencha o campo da tarefa")    
@@ -25,9 +25,15 @@ function adicionarTarefa(){
     document.getElementById("task");
 }
 //criando a função listar tarefas
-
-let valor="";
-for(let i=0; i < tarefas.length; i++) {
-    valor += tarefas[i] + "<br>";
+function listarTarefas() {
+    let valor="";
+    for(let i=0; i < tarefas.length; i++) {
+        valor += tarefas[i] + "<br>";
 }
 document.getElementById("lista").innerHTML = valor;
+}
+//Criando a função remover tarefa
+function removerTarefa() {
+    tarefas.pop();
+    listarTarefas();
+}
