@@ -24,3 +24,10 @@ function adicionarTarefa(){
     }
     document.getElementById("task");
 }
+//criando a função listar tarefas
+
+let valor="";
+for(let i=0; i < tarefas.length; i++) {
+    valor += tarefas[i] + "<br>";
+}
+document.getElementById("lista").innerHTML = valor;
